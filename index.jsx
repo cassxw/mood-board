@@ -54,7 +54,7 @@ export function MoodBoardItem({ color, image, description }) {
 
 export function MoodBoard() {
   return (
-    <div>
+    <div className="mood-board-shell">
       <h1 className="mood-board-heading">Destination Mood Board</h1>
 
       <div className="mood-board">
