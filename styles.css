@@ -20,10 +20,12 @@ body {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 12% 18%, rgba(242, 197, 107, 0.5), transparent 45%),
-    radial-gradient(circle at 85% 12%, rgba(111, 182, 214, 0.45), transparent 40%),
-    radial-gradient(circle at 15% 85%, rgba(240, 133, 115, 0.35), transparent 45%),
-    linear-gradient(130deg, #fff4df, #f7efe1 50%, #e7f1f5);
+    linear-gradient(120deg, #f6d18a 0%, #f1e0c4 38%, #cfe8f7 100%),
+    radial-gradient(circle at 10% 14%, rgba(255, 168, 58, 0.75), transparent 54%),
+    radial-gradient(circle at 92% 8%, rgba(82, 164, 212, 0.65), transparent 52%),
+    radial-gradient(circle at 18% 84%, rgba(255, 132, 108, 0.55), transparent 56%),
+    radial-gradient(circle at 82% 78%, rgba(135, 204, 170, 0.5), transparent 52%),
+    radial-gradient(circle at 55% 45%, rgba(255, 210, 120, 0.5), transparent 46%);
   overflow-x: hidden;
 }
 
@@ -36,20 +38,20 @@ body::after {
 }
 
 body::before {
-  background-image: repeating-linear-gradient(
-      130deg,
-      rgba(31, 26, 22, 0.04),
-      rgba(31, 26, 22, 0.04) 1px,
-      transparent 1px,
-      transparent 6px
-    );
-  opacity: 0.4;
+  background-image: radial-gradient(
+    rgba(31, 26, 22, 0.16) 0.9px,
+    transparent 0.9px
+  );
+  background-size: 12px 12px;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
 }
 
 body::after {
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.7), transparent 42%),
-    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.5), transparent 45%);
+  background-image:
+    radial-gradient(circle at center, transparent 50%, rgba(31, 26, 22, 0.26));
+  opacity: 0.4;
+  mix-blend-mode: multiply;
 }
 
 #root {
@@ -99,9 +101,9 @@ body::after {
   --tilt: -1deg;
   border-radius: 20px;
   padding: 14px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  align-content: start;
   color: #fff;
   min-height: 260px;
   position: relative;
@@ -198,13 +200,35 @@ body::after {
   }
 }
 
+.mood-board-text-block {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
 .mood-board-text {
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.mood-board-subtitle {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.35;
+}
+
+.mood-board-subtitle li + li {
+  margin-top: 4px;
 }
 
 @media (max-width: 900px) {
