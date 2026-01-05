@@ -78,7 +78,9 @@ body::after {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin: 0;
-  text-shadow: 0 10px 20px rgba(31, 26, 22, 0.18);
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.35),
+    0 12px 22px rgba(31, 26, 22, 0.2);
 }
 
 .mood-board {
@@ -132,7 +134,9 @@ body::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.25), transparent 55%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 45%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.18), transparent 55%);
   opacity: 0.9;
 }
 
@@ -178,10 +182,30 @@ body::after {
   width: 100%;
   height: clamp(120px, 16vh, 150px);
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 20px rgba(12, 8, 5, 0.25);
   filter: saturate(1.2) contrast(1.05);
   animation: slow-pan 9s ease-in-out infinite alternate;
+  transition: filter 200ms ease;
+}
+
+.mood-board-image-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(12, 8, 5, 0.25);
+}
+
+.mood-board-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 196, 128, 0.28), rgba(92, 164, 210, 0.22));
+  mix-blend-mode: soft-light;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.mood-board-item:hover .mood-board-image {
+  filter: saturate(1.2) contrast(1.05) brightness(1.03);
 }
 
 .mood-board-item:nth-child(2) .mood-board-image {

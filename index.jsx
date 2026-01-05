@@ -39,7 +39,9 @@ export function MoodBoardItem({ color, image, description }) {
 
   return (
     <div className="mood-board-item" style={defaultStyle}>
-      <img className="mood-board-image" src={image} alt={description} />        
+      <div className="mood-board-image-frame">
+        <img className="mood-board-image" src={image} alt={description} />
+      </div>
       <div className="mood-board-text-block">
         <h3 className="mood-board-text">{description}</h3>
         <ul className="mood-board-subtitle">
