@@ -62,37 +62,37 @@ export function MoodBoard() {
       <div className="mood-board">
         <MoodBoardItem
           color="#d3493a"
-          image="https://cdn.freecodecamp.org/curriculum/labs/pathway.jpg"
+          image="images/japan.png"
           description="Japan"
         />
 
         <MoodBoardItem
           color="#3b6fa5"
-          image="https://cdn.freecodecamp.org/curriculum/labs/santorini.jpg"
+          image="images/greece.png"
           description="Greece"
         />
 
         <MoodBoardItem
           color="#f19537"
-          image="https://cdn.freecodecamp.org/curriculum/labs/grass.jpg"
+          image="images/india.png"
           description="India"
         />
 
         <MoodBoardItem
           color="#1b7a63"
-          image="https://cdn.freecodecamp.org/curriculum/labs/shore.jpg"
+          image="images/mexico.png"
           description="Mexico"
         />
 
         <MoodBoardItem
           color="#f1b932"
-          image="https://cdn.freecodecamp.org/curriculum/labs/ship.jpg"
+          image="images/brazil.png"
           description="Brazil"
         />
 
         <MoodBoardItem
           color="#7ab7d6"
-          image="https://cdn.freecodecamp.org/curriculum/labs/pigeon.jpg"
+          image="images/antarctica.png"
           description="Antarctica"
         />
       </div>
